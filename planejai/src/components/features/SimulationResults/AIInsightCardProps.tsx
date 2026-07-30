@@ -2,6 +2,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import Skeleton from 'react-loading-skeleton'
 import { useInsight } from '@/hooks/useInsight'
 import { Content } from '../Insights/Content'
+import { EducatorChat } from '../Insights/EducatorChat'
 import { Error } from '../Insights/Error'
 
 interface AIInsightCardProps {
@@ -42,6 +43,8 @@ export function AIInsightsCard({ simulationId }: AIInsightCardProps) {
         />
       )}
       {!isLoading && insight && !error && <Content insight={insight} />}
+
+      <EducatorChat simulationId={simulationId} />
     </div>
   )
 }
