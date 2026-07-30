@@ -1,32 +1,37 @@
-# React + TypeScript + Vite
+# 💡 PlanejaAI — Frontend App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Aplicação web do **PlanejaAI (Educador Financeiro Inteligente)** construída com React 19, TypeScript, Vite, Tailwind CSS e API do Google Gemini.
 
-Currently, two official plugins are available:
+Para visualizar a documentação completa da proposta conceitual, arquitetura e guia do projeto, consulte o arquivo [README.md principal](../README.md).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Guia Rápido de Execução
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+### 1. Instalar dependências
+```bash
+npm install
+# ou
+pnpm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### 2. Configurar Variáveis de Ambiente
+Crie um arquivo `.env.local` baseado em `.env.example`:
+```bash
+cp .env.example .env.local
+```
+Adicione a sua chave da API do Google Gemini:
+```env
+VITE_GEMINI_API_KEY=sua_chave_gemini_aqui
+```
+
+### 3. Rodar em Modo de Desenvolvimento
+```bash
+npm run dev
+```
+
+### 4. Scripts Úteis
+- `npm run dev`: Inicia o servidor local de desenvolvimento.
+- `npm run build`: Compila e gera os arquivos estáticos de produção na pasta `dist`.
+- `npm run lint`: Executa a verificação estática do código utilizando Oxlint.
+- `npm run preview`: Visualiza a versão compilada de produção localmente.
