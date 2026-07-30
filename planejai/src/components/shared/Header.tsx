@@ -1,39 +1,61 @@
 import { Clock, Moon, Sun, TrendingUp, Wallet } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { useSimulationStorage } from '@/hooks/useSimulationStorage'
 import { useTheme } from '@/hooks/useTheme'
 import { Button } from './Button'
 import { Divider } from './Divider'
 
 export function Header() {
   const navigate = useNavigate()
+  const location = useLocation()
   const { theme, toggleTheme } = useTheme()
+  const { getSimulations } = useSimulationStorage()
+
+  const simulationsCount = getSimulations().length
+  const isFormActive = location.pathname === '/'
+  const isHistoryActive = location.pathname === '/historico'
 
   return (
-    <header className="border-b border-(--border) px-6 py-3">
+    <header className="border-border border-b px-4 sm:px-6 py-3 bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <nav className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="bg-primary flex h-9 w-9 items-center justify-center rounded-full">
+        <button
+          type="button"
+          onClick={() => void navigate('/')}
+          className="flex cursor-pointer items-center gap-2 transition-opacity hover:opacity-85"
+        >
+          <div className="bg-primary flex h-9 w-9 items-center justify-center rounded-full shadow-xs">
             <Wallet size={20} className="text-primary-foreground" />
           </div>
           <span className="text-lg">
             <span className="text-muted-foreground font-medium">Planej</span>
-            <span className="font-extrabold">.ai</span>
+            <span className="font-extrabold text-foreground">.ai</span>
           </span>
-        </div>
-        <div className="flex items-center gap-1">
+        </button>
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <Button
-            variant="secondary"
+            variant={isFormActive ? 'primary' : 'secondary'}
             icon={TrendingUp}
             onClick={() => void navigate('/')}
           >
             <span className="hidden sm:inline">Nova Simulação</span>
           </Button>
           <Button
-            variant="ghost"
+            variant={isHistoryActive ? 'primary' : 'ghost'}
             icon={Clock}
             onClick={() => void navigate('/historico')}
           >
             <span className="hidden sm:inline">Histórico</span>
+            {simulationsCount > 0 && (
+              <span
+                className={`ml-1 rounded-full px-1.5 py-0.2 text-[10px] font-bold ${
+                  isHistoryActive
+                    ? 'bg-primary-foreground text-primary'
+                    : 'bg-primary/20 text-primary'
+                }`}
+              >
+                {simulationsCount}
+              </span>
+            )}
           </Button>
           <Divider orientation="vertical" />
           <Button

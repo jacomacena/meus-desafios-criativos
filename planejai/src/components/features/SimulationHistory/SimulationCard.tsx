@@ -70,7 +70,7 @@ export function SimulationCard({ simulation, onDelete }: SimulationCardProps) {
       </div>
 
       {/* Middle: Metrics */}
-      <div className="grid grid-cols-3 gap-4 sm:flex sm:flex-1 sm:justify-around">
+      <div className="grid grid-cols-3 gap-4 sm:flex sm:flex-1 sm:justify-around sm:gap-8">
         <div>
           <div className="text-muted-foreground mb-0.5 flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wide">
             <Wallet size={12} className="text-primary" />

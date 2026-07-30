@@ -53,6 +53,7 @@ export function FormStep({
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <Input
           {...inputProps}
+          autoFocus
           value={inputValue}
           onChange={(e) =>
             setInputValue(
