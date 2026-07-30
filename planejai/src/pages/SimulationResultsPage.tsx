@@ -95,13 +95,6 @@ export function SimulationResultsPage() {
               </>
             )}
           </button>
-          <Button
-            variant="primary"
-            icon={PlusCircle}
-            onClick={() => void navigate('/')}
-          >
-            Nova Simulação
-          </Button>
         </div>
       </div>
 

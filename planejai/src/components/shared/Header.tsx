@@ -45,17 +45,6 @@ export function Header() {
             onClick={() => void navigate('/historico')}
           >
             <span className="hidden sm:inline">Histórico</span>
-            {simulationsCount > 0 && (
-              <span
-                className={`ml-1 rounded-full px-1.5 py-0.2 text-[10px] font-bold ${
-                  isHistoryActive
-                    ? 'bg-primary-foreground text-primary'
-                    : 'bg-primary/20 text-primary'
-                }`}
-              >
-                {simulationsCount}
-              </span>
-            )}
           </Button>
           <Divider orientation="vertical" />
           <Button

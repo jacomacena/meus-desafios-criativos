@@ -84,13 +84,6 @@ export function SimulationHistoryPage() {
               {simulations.length}{' '}
               {simulations.length === 1 ? 'simulação' : 'simulações'}
             </span>
-            <Button
-              variant="primary"
-              icon={PlusCircle}
-              onClick={() => void navigate('/')}
-            >
-              Nova Simulação
-            </Button>
           </div>
         )}
       </div>
