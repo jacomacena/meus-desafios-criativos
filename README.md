@@ -9,6 +9,7 @@
 O **PlanejaAI** nasceu com a missão de democratizar a educação e o planejamento financeiro pessoal. Muitas pessoas — especialmente iniciantes, adultos e idosos — encontram barreiras no controle de suas finanças devido a sistemas complexos, planilhas difíceis ou termos técnicos ("economês").
 
 Esta aplicação resolve esse desafio ao oferecer:
+
 1. **Interface intuitiva e acolhedora** que guia o usuário passo a passo.
 2. **Diagnósticos financeiros automáticos** em linguagem clara e prática.
 3. **Simulador de metas** que calcula o impacto real dos objetivos de vida no orçamento diário.
@@ -20,7 +21,7 @@ Esta aplicação resolve esse desafio ao oferecer:
 
 - 🎯 **Simulação Guiada de Metas**: Coleta simples e intuitiva de renda mensal, custos fixos, parcelas/dívidas e metas financeiras (com valor e prazo).
 - 🤖 **Diagnóstico Automático por IA (Google Gemini)**:
-  - **Status de Viabilidade**: Classificação clara se a meta é *Viável*, *Necessita Ajustes* ou *Inviável*.
+  - **Status de Viabilidade**: Classificação clara se a meta é _Viável_, _Necessita Ajustes_ ou _Inviável_.
   - **Análise do Perfil**: Resumo da saúde financeira sem termos difíceis.
   - **Corte de Custos**: Recomendações práticas e acionáveis de onde economizar.
   - **Renda Extra**: Ideias realistas para complementar a receita mensal.
@@ -82,11 +83,13 @@ EducadorFinanceiro/
 ### Passo a Passo
 
 1. **Acessar o diretório da aplicação web**:
+
    ```bash
    cd planejai
    ```
 
 2. **Instalar as dependências**:
+
    ```bash
    npm install
    # ou usando pnpm:
@@ -95,10 +98,13 @@ EducadorFinanceiro/
 
 3. **Configurar as Variáveis de Ambiente**:
    Crie um arquivo `.env.local` na raiz da pasta `planejai` copiando o modelo `.env.example`:
+
    ```bash
    cp .env.example .env.local
    ```
+
    Abra o arquivo `.env.local` e insira sua chave da API Gemini:
+
    ```env
    VITE_GEMINI_API_KEY=sua_chave_gemini_aqui
    ```
@@ -109,7 +115,7 @@ EducadorFinanceiro/
    # ou:
    pnpm dev
    ```
-   Acesse a aplicação no seu navegador pelo endereço indicado no terminal (ex: `http://localhost:5173`).
+   Acesse a aplicação no seu navegador pelo endereço indicado no terminal (ex: `http://localhost:5050`).
 
 ---
 
@@ -127,6 +133,7 @@ Dentro do diretório `planejai`, você pode rodar:
 ## 💡 Filosofia de Comunicação da IA
 
 A IA integrada no PlanejaAI foi instruída para:
+
 - Falar em 2ª pessoa ("você", "sua meta") de forma empática e encorajadora.
 - Evitar jargões bancários ou termos complexos sem explicação.
 - Apresentar recomendações em **listas curtas** e **exemplos práticos do dia a dia**.
@@ -134,4 +141,5 @@ A IA integrada no PlanejaAI foi instruída para:
 
 ---
 
- Desenvolvido com 💙 para tornar a educação financeira acessível a todos!
+Desenvolvido com 💙 para tornar a educação financeira acessível a todos!
+

@@ -5,6 +5,12 @@ import path from 'node:path'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    port: 5050,
+  },
+  preview: {
+    port: 5051,
+  },
   resolve: {
     alias: {
       '@': path.resolve(import.meta.dirname, './src'),
