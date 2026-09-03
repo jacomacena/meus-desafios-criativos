@@ -6,10 +6,10 @@ import path from 'node:path'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    port: 5050,
+    port: 5550,
   },
   preview: {
-    port: 5051,
+    port: 5551,
   },
   resolve: {
     alias: {

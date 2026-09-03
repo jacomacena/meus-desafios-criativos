@@ -115,7 +115,7 @@ EducadorFinanceiro/
    # ou:
    pnpm dev
    ```
-   Acesse a aplicação no seu navegador pelo endereço indicado no terminal (ex: `http://localhost:5050`).
+   Acesse a aplicação no seu navegador pelo endereço indicado no terminal (ex: `http://localhost:5550`).
 
 ---
 
